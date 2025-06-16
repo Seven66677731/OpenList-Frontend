@@ -45,7 +45,6 @@ export type FsStrmResp = Resp<{
   successPaths: string[]
   failedPaths: string[]
   deleteFiles: string[]
-  freshLibrary: string[]
 }>
 
 export type EmptyResp = Resp<{}>

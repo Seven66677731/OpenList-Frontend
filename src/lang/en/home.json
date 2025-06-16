@@ -176,5 +176,12 @@
     "cancel_if_exists": "Cancel if file exists",
     "overwrite_existing": "Overwrite existing files",
     "skip_existing": "Skip existing files"
+  },
+  "strm": {
+    "generate_strm": "generate_strm",
+    "generate_strm_tips": "Do you wish to proceed with generating a strm?",
+    "success": "Generated strm successfully",
+    "failed": " Failed to generate strm",
+    "delete_file": "Delete File"
   }
 }

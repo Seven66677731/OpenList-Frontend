@@ -89,7 +89,6 @@ export const GenerateStrm = () => {
   const [successResult, setSuccessResult] = createSignal<string[]>([])
   const [failResult, setFailResult] = createSignal<string[]>([])
   const [deleteResult, setDeleteResult] = createSignal<string[]>([])
-  const [freshLibrary, setFreshLibrary] = createSignal<string[]>([])
   const handler = (name: string) => {
     if (name === "generate_strm") {
       setSuccessResult([])
@@ -116,12 +115,12 @@ export const GenerateStrm = () => {
       <ModalOverlay />
 
       <ModalContent>
-        <ModalHeader>{t("home.toolbar.generate_strm")}</ModalHeader>
+        <ModalHeader>{t("home.strm.generate_strm")}</ModalHeader>
         <ModalBody maxH="70vh" overflow="auto" p="$4">
           <Show
             when={successResult()?.length == 0 && failResult()?.length == 0}
           >
-            <Text>{t("home.toolbar.generate_strm-tips")}</Text>
+            <Text>{t("home.strm.generate_strm_tips")}</Text>
           </Show>
           <Show when={loading()}>
             <FullLoading />
@@ -144,18 +143,6 @@ export const GenerateStrm = () => {
               shadow="$lg"
               spacing="$6"
             >
-              <Show when={true}>
-                <Text
-                  color="$success9"
-                  fontSize="$xl"
-                  fontWeight="bold"
-                  borderBottom="2px solid"
-                  borderColor="$success6"
-                  pb="$2"
-                >
-                  需要刷新的媒体库: {freshLibrary()}
-                </Text>
-              </Show>
               <Show when={successResult().length > 0}>
                 <Text
                   color="$success9"
@@ -165,7 +152,7 @@ export const GenerateStrm = () => {
                   borderColor="$success6"
                   pb="$2"
                 >
-                  生成成功
+                  {t("home.strm.success")}
                 </Text>
                 <For each={successResult()}>
                   {(obj, i) => (
@@ -183,7 +170,7 @@ export const GenerateStrm = () => {
                   borderColor="$danger6"
                   pb="$2"
                 >
-                  生成失败
+                  {t("home.strm.failed")}
                 </Text>
                 <For each={failResult()}>
                   {(obj, i) => (
@@ -201,7 +188,7 @@ export const GenerateStrm = () => {
                   borderColor="$danger6"
                   pb="$2"
                 >
-                  删除文件
+                  {t("home.strm.delete_file")}
                 </Text>
                 <For each={deleteResult()}>
                   {(obj, i) => (
@@ -231,7 +218,6 @@ export const GenerateStrm = () => {
                   setSuccessResult(resp.data.successPaths?.sort() || [])
                   setFailResult(resp.data.failedPaths?.sort() || [])
                   setDeleteResult(resp.data.deleteFiles?.sort() || [])
-                  setFreshLibrary(resp.data.freshLibrary?.sort() || [])
                 })
               }}
             >
