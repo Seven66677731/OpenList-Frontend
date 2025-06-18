@@ -115,12 +115,12 @@ export const GenerateStrm = () => {
       <ModalOverlay />
 
       <ModalContent>
-        <ModalHeader>{t("home.strm.generate_strm")}</ModalHeader>
+        <ModalHeader>{t("home.toolbar.strm.generate_strm")}</ModalHeader>
         <ModalBody maxH="70vh" overflow="auto" p="$4">
           <Show
             when={successResult()?.length == 0 && failResult()?.length == 0}
           >
-            <Text>{t("home.strm.generate_strm_tips")}</Text>
+            <Text>{t("home.toolbar.strm.generate_strm_tips")}</Text>
           </Show>
           <Show when={loading()}>
             <FullLoading />
@@ -152,7 +152,7 @@ export const GenerateStrm = () => {
                   borderColor="$success6"
                   pb="$2"
                 >
-                  {t("home.strm.success")}
+                  {t("home.toolbar.strm.success")}
                 </Text>
                 <For each={successResult()}>
                   {(obj, i) => (
@@ -170,7 +170,7 @@ export const GenerateStrm = () => {
                   borderColor="$danger6"
                   pb="$2"
                 >
-                  {t("home.strm.failed")}
+                  {t("home.toolbar.strm.failed")}
                 </Text>
                 <For each={failResult()}>
                   {(obj, i) => (
@@ -188,7 +188,7 @@ export const GenerateStrm = () => {
                   borderColor="$danger6"
                   pb="$2"
                 >
-                  {t("home.strm.delete_file")}
+                  {t("home.toolbar.strm.delete_file")}
                 </Text>
                 <For each={deleteResult()}>
                   {(obj, i) => (
