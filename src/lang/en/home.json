@@ -2,7 +2,15 @@
   "obj": {
     "name": "Name",
     "size": "Size",
-    "modified": "Modified"
+    "modified": "Modified",
+    "count": {
+      "count": "{{folders}} folders, {{files}} files in total",
+      "count_folders": "{{folders}} folders in total",
+      "count_files": "{{files}} files in total",
+      "selected": "{{folders}} folders, {{files}} files selected",
+      "selected_folders": "{{folders}} folders selected",
+      "selected_files": "{{files}} files selected"
+    }
   },
   "preview": {
     "download": "Download",
