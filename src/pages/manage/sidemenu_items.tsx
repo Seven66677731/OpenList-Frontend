@@ -23,7 +23,7 @@ import { IoCopy, IoHome, IoMagnetOutline } from "solid-icons/io"
 import { Component, lazy } from "solid-js"
 import { Group, UserRole } from "~/types"
 import { FaSolidBook, FaSolidDatabase } from "solid-icons/fa"
-import { TbArchive } from "solid-icons/tb"
+import { TbArchive, TbRepeat } from "solid-icons/tb"
 
 export type SideMenuItem = SideMenuItemProps & {
   component?: Component
@@ -154,6 +154,13 @@ export const side_menu_items: SideMenuItem[] = [
         component: lazy(() => import("./tasks/Decompress")),
       },
     ],
+  },
+  {
+    title: "manage.sidemenu.syncer",
+    icon: TbRepeat,
+    to: "/@manage/tasks/syncer",
+    role: UserRole.GENERAL,
+    component: lazy(() => import("~/pages/manage/syncer/Syncer")),
   },
   {
     title: "manage.sidemenu.users",

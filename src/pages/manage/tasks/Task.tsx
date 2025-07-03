@@ -35,7 +35,13 @@ enum TaskStateEnum {
   BeforeRetry,
 }
 
-const StateMap: Record<
+export const CompletedStates = [
+  TaskStateEnum.Succeeded,
+  TaskStateEnum.Canceled,
+  TaskStateEnum.Failed,
+]
+
+export const StateMap: Record<
   string,
   | "primary"
   | "accent"
@@ -46,6 +52,7 @@ const StateMap: Record<
   | "danger"
   | undefined
 > = {
+  [TaskStateEnum.Pending]: "info",
   [TaskStateEnum.Failed]: "danger",
   [TaskStateEnum.Succeeded]: "success",
   [TaskStateEnum.Canceled]: "neutral",
