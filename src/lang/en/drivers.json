@@ -845,11 +845,13 @@
     "username": "Username"
   },
   "Strm": {
+    "encodePath": "EncodePath",
+    "encodePath-tips": "encode the path in the strm file",
     "filterFileTypes": "FilterFileTypes",
     "filterFileTypes-tips": "Supports suffix name of strm file",
     "paths": "Paths",
-    "protect_same_name": "Protect same name",
-    "protect_same_name-tips": "Protects same-name files from Delete or Rename",
+    "signPath": "SignPath",
+    "signPath-tips": "sign the path in the strm file",
     "siteUrl": "SiteUrl",
     "siteUrl-tips": "The prefix URL of the strm file"
   },
@@ -1045,11 +1047,6 @@
     "username": "Username",
     "username-tips": "login type is user,this is required"
   },
-  "Trainbit": {
-    "AUSHELLPORTAL": "AUSHELLPORTAL",
-    "apikey": "Apikey",
-    "root_folder_id": "Root folder id"
-  },
   "UC": {
     "cookie": "Cookie",
     "only_list_video_file": "Only list video file",
@@ -1239,7 +1236,6 @@
     "ThunderExpert": {},
     "ThunderX": {},
     "ThunderXExpert": {},
-    "Trainbit": {},
     "UC": {},
     "UCTV": {},
     "USS": {},
@@ -1318,7 +1314,6 @@
     "ThunderExpert": "ThunderExpert",
     "ThunderX": "ThunderX",
     "ThunderXExpert": "ThunderXExpert",
-    "Trainbit": "Trainbit",
     "UC": "UC",
     "UCTV": "UCTV",
     "USS": "USS",
